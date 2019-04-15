@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Writing JavaScript Assignment</title>
+</head>
+
+<body>
+  <pre class='instructions'>
+    This drill tests your ability to refactor code to be more terse.
+
+    This code has the same output as the previous drill, `10-array-map-join.html`.
+
+    Write down where the refactorings that have taken place:
+
+    1. Using a template string
+    2. Using an anonymous map function instead of a separate function
+    3. Chaining the map and join and so, not creating an unecessary variable.
+
+    Make changes to the below code so that another 5 list items are displayed with the content: "six", "seven", "eight", "nine" and "ten".
+  </pre>
+
+  <div class="content">
+    <h1>Page with a list</h1>
+    <main class="main">
+      <ul class="list"></ul>
+    </main>
+  </div>
+
+<script>
+  const items = ['one', 'two', 'three', 'four', 'five'];
+
+  function getListItems() {
+    return items.map(function (item) {
+      return `<li>List item ${item}!</li>`;
+    }).join('');
+  }
+
+  document.querySelector('.list').innerHTML = getListItems();
+</script>
+</body>
+</html>

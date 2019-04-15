@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Writing JavaScript Assignment</title>
+</head>
+
+<body>
+  <pre class='instructions'>
+    This drill tests your ability to combine reusable functions with objects and dot property access.
+
+    Use the concatenation operator, <code>+</code>, with the result of calling the <code>getDogHtml</code> function with two different dog objects, <code>dog1</code> and <code>dog2</code>.
+
+    The result of concatenating the resulting div elements should be inserted into the main element.
+  </pre>
+
+  <div class="content">
+    <h1>Whas is this?</h1>
+    <main class="main">
+
+    </main>
+  </div>
+
+<script>
+  const dog1 = {
+    name: 'Scooby!',
+    description: 'A very loyal, cowardly and hungry dog. Incredibly ticklish.',
+    breed: 'Great Dane',
+    age: 7,
+  };
+
+  const dog2 = {
+    name: 'Gnasher',
+    description: 'A very loyal, brave and crafty dog. The enemy of Foo-Foo',
+    breed: 'Abyssinian',
+    age: 51,
+  };
+
+  function getDogHtml(dog) {
+    return `
+      <div>
+        <h2>${dog.name}</h2>
+        <p>${dog.description}</p>
+        <p>Breed: ${dog.breed}</p>
+        <p>Age in years: ${dog.age}</p>
+      </div>
+    `;
+  }
+
+  document.querySelector('.main').innerHTML = getDogHtml(dog1) + getDogHtml(dog2);
+</script>
+</body>
+
+</html>

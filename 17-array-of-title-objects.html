@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Writing JavaScript Assignment</title>
+</head>
+
+<body>
+  <pre class='instructions'>
+    This drill tests your ability to use arrays of objects with reusable functions.
+
+    Use the two arrays of objects with the resuable function to insert content into the page for both the top albums and top songs.
+
+    You'll use two DOM selections. With each selection, set the content using the <code>getListOfTitles</code> and passing in the appropriate variable as a function argument.
+  </pre>
+
+  <div class="content">
+    <h1>Whas is this?</h1>
+    <main class="main">
+      <h2>Top Albums</h2>
+      <ul class="top-albums"></ul>
+      <h2>Top Songs</h2>
+      <ul class="top-songs"></ul>
+    </main>
+  </div>
+
+<script>
+  const topAlbums = [
+    {
+      title: `What's Going On`,
+      artist: `Marvin Gaye`,
+    },
+    {
+      title: `Nevermind`,
+      artist: `Nirvana`,
+    },
+    {
+      title: `The Rise And Fall Of Ziggy Stardust And The Spiders From Mars`,
+      artist: `David Bowie`,
+    },
+    {
+      title: `It Takes A Nation Of Millions To Hold Us Back`,
+      artist: `Public Enemy`,
+    },
+    {
+      title: `Sgt Peppers Lonely Hearts Club Band`,
+      artist: `The Beatles`,
+    }
+  ];
+
+  const topSongs = [
+    {
+      title: `Billie Jean`,
+      artist: `Michael Jackson`,
+    },
+    {
+      title: `Bohemian Rhapsody`,
+      artist: `Queen`,
+    },
+    {
+      title: `I Got You Babe`,
+      artist: `Sonny Bono`,
+    },
+    {
+      title: `The Twist`,
+      artist: `Chubby Checker`,
+    },
+    {
+      title: `California Love`,
+      artist: `Tupac Shakur`,
+    }
+  ];
+
+  function getListOfTitles(titlesArray) {
+    return titlesArray.map(function (title) {
+      return `
+        <li>
+          <h2>${title.title}</h2>
+          <p>Artists: ${title.artist}</p>
+        </li>
+      `;
+    }).join('')
+  }
+
+  document.querySelector('.top-albums').innerHTML = getListOfTitles(topAlbums);
+  document.querySelector('.top-songs').innerHTML = getListOfTitles(topSongs);
+</script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Writing JavaScript Assignment</title>
+</head>
+
+<body>
+  <pre class='instructions'>
+    This drill tests your ability to use dot property access of an object.
+
+    Complete the <code>getButtonHtml</code> function to display all of the properties of the button object.
+  </pre>
+
+  <div class="content">
+    <h1>Whas is this?</h1>
+    <main class="main">
+
+    </main>
+  </div>
+
+<script>
+  const button = {
+    name: 'The mighty button!',
+    description: 'A button is a small fastener, now most commonly made of plastic!',
+    color: 'yellow',
+    ageInYears: 3000,
+    shape: 'circle',
+    usedFor: 'A jacket'
+  };
+
+  function getButtonHtml() {
+    return `
+      <div>
+        <h2>${button.name}</h2>
+        <p>${button.description}</p>
+        <p>Color: ${button.color}</p>
+        <p>Age in years: ${button.ageInYears}</p>
+        <p>Shape: ${button.shape}</p>
+        <p>Used for: ${button.usedFor}</p>
+      </div>
+    `;
+  }
+
+  document.querySelector('.main').innerHTML = getButtonHtml();
+</script>
+</body>
+
+</html>

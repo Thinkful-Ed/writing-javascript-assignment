@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <title>Writing JavaScript Assignment</title>
+</head>
+
+<body>
+  <pre class='instructions'>
+    This drill tests your ability to write a terse function that maps an array of strings to <code>p</code> elements on the page.
+
+    The goal for this code is to display all of the beatles inside <code>p</code> elements within the div with a class attribute of "beatles".
+
+    1. Use the <code>beatles</code> argument inside the <code>getBeatlesPs</code> function to map over the array items passed in.
+    2. Within the map, return a string containing a <code>p</code> element and content.
+    3. The content of each P element should be a <code>[beatle] was in the Beatles!</code>.
+    4. Chain an array <code>.join('')</code> off the return from the <code>beatles.map()</code> and return the result.
+    5. This should display all the beatle <code>p</code> elements within the <code>div.beatles</code>.
+  </pre>
+
+  <div class="content">
+    <h1>All the beatles</h1>
+    <main class="main">
+      <div class="beatles"></div>
+    </main>
+  </div>
+
+<script>
+  const beatlesArray = ['John', 'Paul', 'Ringo', 'George', 'Pete', 'Stuart', 'Jimmie', 'Tommy'];
+
+  function getBeatlesPs(beatles) {
+    return beatles.map(function (beatle) {
+      return `<p>${beatle} was in the Beatles!</p>`;
+    }).join('');
+  }
+
+  document.querySelector('.beatles').innerHTML = getBeatlesPs(beatlesArray);
+</script>
+</body>
+</html>
