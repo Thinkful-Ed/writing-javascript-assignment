@@ -31,10 +31,13 @@
 
 <script>
   function getListItem(item) {
-    return '<li>Item ' + item + '!</li>'
+    return '<li>Item ' + item + '!</li>';
   }
 
-  document.querySelector('.list').innerHTML = getListItem('one') + getListItem('two') + getListItem('three');
+  document.querySelector('.list').innerHTML =
+    getListItem('one')
+    + getListItem('two')
+    + getListItem('three');
 </script>
 </body>
 
